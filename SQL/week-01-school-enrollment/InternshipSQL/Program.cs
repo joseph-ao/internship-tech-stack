@@ -372,5 +372,5 @@ static void SaveAverageGrades(string connStr)
             }
         }
     }
-    catch (SqlException ex) { Console.WriteLine($"Error: {ex.Message}"); }
+    catch (SqlException ex) { Console.WriteLine("error"); }
 }
