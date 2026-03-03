@@ -80,7 +80,7 @@ while (true)
     }
 }
 
-// ===================== METHODS =====================
+
 
 static void GetCoursesByMajor(string connStr, string majorName)
 {
@@ -369,7 +369,6 @@ static void SaveAverageGrades(string connStr)
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
                 int rows = cmd.ExecuteNonQuery();
-                Console.WriteLine($"\nAverage grades calculated and saved for {rows} student(s).");
             }
         }
     }
