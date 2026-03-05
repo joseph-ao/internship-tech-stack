@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\DummyApi.props" />
-</Project>
