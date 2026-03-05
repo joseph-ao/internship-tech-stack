@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DummyApi.Services.Interface;
+using Microsoft.AspNetCore.Mvc;
 
 namespace DummyApi.Controllers;
 
@@ -6,9 +7,17 @@ namespace DummyApi.Controllers;
 [Route("api/[controller]")]
 public class EmployeeController : ControllerBase
 {
+    private readonly IEmployeeService _service;
+
+    public EmployeeController(IEmployeeService service)
+    {
+        _service = service;
+    }
+
     [HttpGet("all")]
     public async Task<IActionResult> GetEmployees()
     {
-        return Ok("employeecontroller works");
+        var employees = await _service.GetEmployees();
+        return Ok(employees);
     }
 }
