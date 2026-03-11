@@ -13,8 +13,8 @@ public class EmployeeService : IEmployeeService
         _repository = repository;
     }
 
-    public async Task<IEnumerable<Employee>> GetEmployees()
+    public async Task<IEnumerable<Employee>> GetEmployeesAsync()
     {
-        return await _repository.GetEmployees();
+        return await _repository.GetEmployeesAsync();
     }
 }

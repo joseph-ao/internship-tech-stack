@@ -4,5 +4,5 @@ namespace DummyApi.Services.Interface;
 
 public interface IEmployeeService
 {
-    public Task<IEnumerable<Employee>> GetEmployees();
+    public Task<IEnumerable<Employee>> GetEmployeesAsync();
 }

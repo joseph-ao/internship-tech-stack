@@ -4,5 +4,5 @@ namespace DummyApi.Repositories.Interface;
 
 public interface IEmployeeRepository
 {
-    public Task<IEnumerable<Employee>> GetEmployees();
+    public Task<IEnumerable<Employee>> GetEmployeesAsync();
 }

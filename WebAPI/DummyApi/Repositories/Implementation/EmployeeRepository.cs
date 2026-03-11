@@ -14,7 +14,7 @@ public class EmployeeRepository : IEmployeeRepository
         _config = config;
     }
 
-    public async Task<IEnumerable<Employee>> GetEmployees()
+    public async Task<IEnumerable<Employee>> GetEmployeesAsync()
     {
         using var connection = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
         var sql = "SELECT Id, Name, Department FROM Employee";
